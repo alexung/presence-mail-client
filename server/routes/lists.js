@@ -44,7 +44,7 @@ module.exports = function(app, io) {
   });
 
   // Post new subscribers
-  app.post('/api/list/add/subscribers', apiIsAuth, writeListAccess, (req, res) => {
+  app.post('/api/list/add/subscribers', parseJson, (req, res) => {
     addSubscribers(req, res);
   });
   // Post new list via csv import
